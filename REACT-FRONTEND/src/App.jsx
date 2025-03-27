@@ -6,6 +6,7 @@ import Popup from "./components/Popup/Popup.jsx";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import About from "./components/About.jsx";
+import Blog from "./components/Blog.jsx";
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/" element={<Home handleOrderPopup={handleOrderPopup} />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
         <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} />
