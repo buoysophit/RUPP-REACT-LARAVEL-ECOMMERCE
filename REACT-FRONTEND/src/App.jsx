@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer.jsx";
 import Popup from "./components/Popup/Popup.jsx";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
+import About from "./components/About.jsx";
+
 
 
 
@@ -37,6 +39,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home handleOrderPopup={handleOrderPopup} />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
         <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} />
