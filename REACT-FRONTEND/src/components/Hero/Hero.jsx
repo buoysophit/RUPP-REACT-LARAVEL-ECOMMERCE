@@ -21,7 +21,7 @@ const HeroData = [
     title2: "Virtual",
   },
   {
-    id: 1,
+    id: 3,
     img: Image3,
     subtitle: "Beats Solo",
     title: "Branded",
@@ -31,22 +31,30 @@ const HeroData = [
 
 const Hero = ({ handleOrderPopup }) => {
   const settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     cssEase: "ease-in-out",
-    pauseOnHover: false,
+    pauseOnHover: true,
     pauseOnFocus: true,
+    appendDots: (dots) => (
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <ul className="flex gap-2">{dots}</ul>
+      </div>
+    ),
+    customPaging: () => (
+      <div className="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors cursor-pointer" />
+    ),
   };
+
   return (
     <div className="container">
       <div
-        className="overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] hero-bg-color flex justify-center items-center
-"
+        className="overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] hero-bg-color flex justify-center items-center relative"
       >
         <div className="container pb-8 sm:pb-0">
           {/* Hero section */}
@@ -55,7 +63,7 @@ const Hero = ({ handleOrderPopup }) => {
               <div key={data.id}>
                 <div className="grid grid-cols-1 sm:grid-cols-2">
                   {/* text content section */}
-                  <div className="flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10 ">
+                  <div className="flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                     <h1
                       data-aos="zoom-out"
                       data-aos-duration="500"
