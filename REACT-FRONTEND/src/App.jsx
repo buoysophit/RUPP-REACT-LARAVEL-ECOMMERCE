@@ -9,6 +9,7 @@ import About from "./components/About.jsx";
 import Blog from "./components/Blogs.jsx";
 import BestSelling from "./components/BestSelling.jsx";
 import TopRated from "./components/TopRated.jsx";
+import TrendingProducts from "./components/TrendingProducts.jsx";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/best-selling" element={<BestSelling />} />
           <Route path="/top-rated" element={<TopRated />} />
+          <Route path="/TrendingProducts" element={<TrendingProducts />} />
         </Routes>
         <Footer />
         <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} />
